@@ -1,0 +1,108 @@
+
+*{
+
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+
+}
+body {
+    background-color: #FFFFFF;
+}
+
+
+}
+.landscape {
+    height: 30px;
+    width: 80px;
+}
+
+/* Transistion both your normal and hovered elements to allow for smooth flow when unhovered */
+
+.card {
+    float: center;
+    background: white;
+    margin-top: 40px;
+    height: 400px;
+    width: 20%;
+    transition: 0.6s all ease;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 0px 20px #000000b3;
+}
+
+/* I used background url to allow me to change the height and width without needing extra css */
+
+.cardTop {
+
+    transition: 0.4s all ease;
+    height: 65%;
+
+    background: url("Plag.png")
+    no-repeat;*/
+}
+
+.cardBottom {
+    width:100%;
+    height: 35%;
+    text-wrap: normal;
+    transition: 0.4s all ease;
+}
+
+.cardText {
+    min-height: 100%;
+    padding: 20px;
+}
+
+.cardTitle {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+a.button{
+
+    width: 50%;
+    background: orange;
+    color: white;
+    text-align: center;
+    display: block;
+    padding: 8px 0;
+    transition: 0.2s all;
+    text-decoration: none;
+}
+a.button:hover{
+    color :black;
+}
+
+/* Hidding the entire so anything we put in will only show on hover */
+
+.cardHoverText {
+    visibility: hidden;
+}
+
+/* Hover affects */
+
+.card:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Using className + hover followed by child element allows you to change child elements when parent is hovered */
+
+.card:hover .cardHoverText {
+    visibility: visible;
+    transition: 0.4s all ease;
+    transition-delay: 0.1999s;
+}
+
+.card:hover .cardBottom {
+    transition: 0.4s all ease;
+    height: 65%;
+    opacity: 1;
+}
+
+.card:hover .cardTop {
+    height: 35%;
+    opacity: 0.8;
+    transition: 0.4s all ease;
+}
+@media screen and (max-width: 800px) {
+    .left, .main, .right {
+    width: 100%;}
